@@ -1,0 +1,43 @@
+.solution {
+	position:relative;
+	/*background-color:rgba(255,255,255,.5);*/
+	width: 930px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 15px;
+}
+.splash  { margin-bottom: 15px; }
+
+.bottomLinks { height:118px; }
+
+.feature {
+	width: 300px;
+
+	float:left;
+	position:relative;
+	margin-right: 15px;
+}
+
+.feature.last { margin-right: 0px; }
+.feature a {
+	display:block;
+	width:287px;
+	height:118px;
+}
+.feature .bubble {
+	width:250px; height:143px;
+
+	position:absolute;
+	left:50%; margin-left:-125px; /*No center to position from, this offsets to center*/
+
+	top:-600px;
+	opacity: 0;
+
+	transition: all 2s;
+}
+
+.feature .bubble.on {
+	top:-100px;
+	opacity: 1;
+	transition: all 1s;
+}

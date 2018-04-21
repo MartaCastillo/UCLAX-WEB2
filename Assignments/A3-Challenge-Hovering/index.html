@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rollovers</title>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div id="container">
+			<h1>Swap</h1>
+			<section class="swap">
+				<img class="color" src="img/blob-hover.png">
+
+				<div class="gallery">
+				<img class="star" 	data-color="img/star-hover.png" 	src="img/star.png" />
+				<img class="blob" 	data-color="img/blob-hover.png" 	src="img/blob.png" />
+				<img class="leaf" 	data-color="img/leaf-hover.png" 	src="img/leaf.png" />
+				<img class="heart"  data-color="img/heart-hover.png"	src="img/heart.png" />
+				</div>				
+
+			</section>
+
+			<h1>Rollover</h1>
+			<section class="rollover">
+				<img class="star"	data-color="img/star-hover.png" 	data-gray="img/star.png" 	src="img/star.png" />
+				<img class="blob"	data-color="img/blob-hover.png" 	data-gray="img/blob.png" 	src="img/blob.png" />
+				<img class="leaf"	data-color="img/leaf-hover.png" 	data-gray="img/leaf.png" 	src="img/leaf.png" />
+				<img class="heart"	data-color="img/heart-hover.png"	data-gray="img/heart.png"	src="img/heart.png" />
+			</section>
+
+			<h1>Faded</h1>
+			<section class="faded">
+				<div class="set">
+					<img class="gray" 	 	src="img/star.png" />
+					<img class="color" 	 	src="img/star-hover.png" />
+				</div>
+				<div class="set">
+					<img class="gray" 	 	src="img/blob.png" />
+					<img class="color" 		src="img/blob-hover.png" />
+				</div>
+				<div class="set">
+					<img class="gray" 	 	src="img/leaf.png" />
+					<img class="color" 	 	src="img/leaf-hover.png" />
+				</div>
+				<div class="set">
+					<img class="gray"  		src="img/heart.png" />
+					<img class="color"  	src="img/heart-hover.png" />
+				</div>
+			</section>
+		</div>
+
+		
+		<script>
+			/*-------------------------------------
+			| Swap
+			-------------------------------------*/
+
+			var theSwap = document.querySelectorAll('img.color');
+			var theSwaped = document.querySelectorAll('.gallery img');
+
+			console.log('theSwap Array', theSwap);
+			console.log('theSwap', theSwap[0]);
+			console.log('middle', theSwaped);
+			console.log('middle 1', theSwaped[0]);
+
+
+			theSwaped[0].addEventListener('mouseover', function() {
+				console.log('you got me! Partner!!');
+				theSwap[0].src = 'img/star-hover.png';
+			});
+
+			theSwaped[1].addEventListener('mouseover', function() {
+				console.log('you got me! Partner!!');
+				theSwap[0].src = 'img/blob-hover.png';
+			});
+
+			theSwaped[2].addEventListener('mouseover', function() {
+				console.log('you got me! Partner!!');
+				theSwap[0].src = 'img/leaf-hover.png';
+			});
+
+			theSwaped[3].addEventListener('mouseover', function() {
+				console.log('you got me! Partner!!');
+				theSwap[0].src = 'img/heart-hover.png';
+			});
+
+
+
+			/*-------------------------------------
+			| Rollover
+			-------------------------------------*/
+
+			var theRollover = document.querySelectorAll('.rollover img');
+			console.log('theRollover Array', theRollover);
+			console.log('theRollover Number 1', theRollover[0]);
+			console.log('theRollover Number 2', theRollover[1]);
+			console.log('theRollover Number 3', theRollover[2]);
+
+			/*-------------------------------------
+			| Image 1
+			-------------------------------------*/
+			theRollover[0].addEventListener('mouseover', function() {
+				console.log('over');
+				theRollover[0].src = 'img/star-hover.png';
+			});
+			theRollover[0].addEventListener('mouseout', function() {
+				console.log('out');
+				theRollover[0].src = 'img/star.png';
+			});
+
+
+			/*-------------------------------------
+			| Image 2
+			-------------------------------------*/
+			theRollover[1].addEventListener('mouseover', function() {
+				console.log('over');
+				theRollover[1].src = 'img/blob-hover.png';
+			});
+			theRollover[1].addEventListener('mouseout', function() {
+				console.log('out');
+				theRollover[1].src = 'img/blob.png';
+			});
+
+
+			/*-------------------------------------
+			| Image 3
+			-------------------------------------*/
+			theRollover[2].addEventListener('mouseover', function() {
+				console.log('over');
+				theRollover[2].src = 'img/leaf-hover.png';
+			});
+			theRollover[2].addEventListener('mouseout', function() {
+				console.log('out');
+				theRollover[2].src = 'img/leaf.png';
+			});
+
+
+			/*-------------------------------------
+			| Image 4
+			-------------------------------------*/
+			theRollover[3].addEventListener('mouseover', function() {
+				console.log('over');
+				theRollover[3].src = 'img/heart-hover.png';
+			});
+			theRollover[3].addEventListener('mouseout', function() {
+				console.log('out');
+				theRollover[3].src = 'img/heart.png';
+			});
+
+
+
+			/*-------------------------------------
+			| Fade
+			-------------------------------------*/
+
+			var theFade = document.querySelectorAll('.faded .set img.color');
+
+			console.log('theFade Array: ', theFade);    
+			console.log('theFade', theFade[0]);
+			console.log('theFade', theFade[1]); 
+
+
+			/*-------------------------------------
+			| Image 1
+			-------------------------------------*/
+			theFade[0].addEventListener('mouseover', function() {
+    			console.log(theFade[0]);   
+    			theFade[0].classList.add('on'); 
+			});
+			theFade[0].addEventListener('mouseout', function() {
+    			console.log(theFade[0]);
+    			theFade[0].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 2
+			-------------------------------------*/
+			theFade[1].addEventListener('mouseover', function() {
+    			console.log(theFade[1]);   
+    			theFade[1].classList.add('on'); 
+			});
+			theFade[1].addEventListener('mouseout', function() {
+    			console.log(theFade[1]);
+    			theFade[1].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 3
+			-------------------------------------*/
+			theFade[2].addEventListener('mouseover', function() {
+    			console.log(theFade[2]);   
+    			theFade[2].classList.add('on'); 
+			});
+			theFade[2].addEventListener('mouseout', function() {
+    			console.log(theFade[2]);
+    			theFade[2].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 4
+			-------------------------------------*/
+			theFade[3].addEventListener('mouseover', function() {
+    			console.log(theFade[3]);   
+    			theFade[3].classList.add('on'); 
+			});
+			theFade[3].addEventListener('mouseout', function() {
+    			console.log(theFade[3]);
+    			theFade[3].classList.remove('on');
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+	background-color: #333;
+	color: #eee;
+}
+
+.stage {
+  height: 600px;
+  border: solid 5px teal;
+  background-image: url('../img/pixelgrid-800.gif');
+}
+
+.stage .orb {
+  width: 100px;
+  display: block;
+
+  position: relative;
+
+  /*opacity: 1.0;*/
+  /*opacity: 0.0;*/
+  opacity: 0.3;
+
+  transition: 1s all;
+}
+
+.stage .orb:hover {
+  opacity: 1.0;
+}
+
+.stage .orb1 { left: 0px; }
+.stage .orb2 { left: 100px; }
+.stage .orb3 { left: 200px; }
+.stage .orb4 { left: 300px; }
+
+.stage .orb1.on { left: 400px; }
+.stage .orb2.on { left: 200px; }
+.stage .orb3.on { left: 0px; }
+.stage .orb4.on { left: 100px; }

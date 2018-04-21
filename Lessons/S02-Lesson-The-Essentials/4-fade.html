@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fade</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			body { background-color: #56728f; }
+
+			.fade .set {
+				border: solid 5px #ffffff;
+
+				width: 300px;
+				height: 200px;
+				position: relative;
+				margin: auto;
+				margin-bottom: 25px;
+			}
+
+			.fade .set img {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+
+				transition: all 1s;
+			}
+
+			.fade .set img.color { opacity: 0.00; }
+			.fade .set img.color.on { opacity: 1.00; }
+
+
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Fade</h1>
+
+			<div class="fade">
+
+				<div class="set">
+					<img class="gray" src="./img/gray/1_300x200.jpg">
+					<img class="color" src="./img/color/1_300x200.jpg">
+				</div>
+
+				<div class="set">
+					<img class="gray" src="./img/gray/2_300x200.jpg">
+					<img class="color" src="./img/color/2_300x200.jpg">
+				</div>
+
+				<div class="set">
+					<img class="gray" src="./img/gray/3_300x200.jpg">
+					<img class="color" src="./img/color/3_300x200.jpg">
+				</div>
+
+				<div class="set">
+					<img class="gray" src="./img/gray/4_300x200.jpg">
+					<img class="color" src="./img/color/4_300x200.jpg">
+				</div>
+
+				<div class="set">
+					<img class="gray" src="./img/gray/5_300x200.jpg">
+					<img class="color" src="./img/color/5_300x200.jpg">
+				</div>
+
+				<div class="set">
+					<img class="gray" src="./img/gray/6_300x200.jpg">
+					<img class="color" src="./img/color/6_300x200.jpg">
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+
+			var colorImages = document.querySelectorAll('.fade .set img.color');
+
+			console.log('colorImages Array: ', colorImages);  // no entiendo el array    
+			console.log('colorImages 1', colorImages[0]);
+			console.log('colorImages 2', colorImages[1]); // no entiendo por que no se tiene que poner los otros numeros
+
+
+			/*-------------------------------------
+			| Image 1
+			-------------------------------------*/
+			colorImages[0].addEventListener('mouseover', function() {
+				console.log('over');
+    			console.log(colorImages[0]);  // no entiendo este por que tiene que incluirse 
+    			colorImages[0].classList.add('on'); 
+			});
+			colorImages[0].addEventListener('mouseout', function() {
+				console.log('out');
+    			console.log(colorImages[0]);
+    			colorImages[0].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 2
+			-------------------------------------*/
+			colorImages[1].addEventListener('mouseover', function() {
+				console.log('over');
+    			console.log(colorImages[1]);
+    			colorImages[1].classList.add('on'); 
+			});
+			colorImages[1].addEventListener('mouseout', function() {
+				console.log('out');
+    			console.log(colorImages[1]);
+    			colorImages[1].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 3
+			-------------------------------------*/
+			colorImages[2].addEventListener('mouseover', function() {
+				console.log('over');
+    			console.log(colorImages[2]);
+    			colorImages[2].classList.add('on'); 
+			});
+			colorImages[2].addEventListener('mouseout', function() {
+				console.log('out');
+    			console.log(colorImages[2]);
+    			colorImages[2].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 4
+			-------------------------------------*/
+			colorImages[3].addEventListener('mouseover', function() {
+				console.log('over');
+    			console.log(colorImages[3]);
+    			colorImages[3].classList.add('on'); 
+			});
+			colorImages[3].addEventListener('mouseout', function() {
+				console.log('out');
+    			console.log(colorImages[3]);
+    			colorImages[3].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 5
+			-------------------------------------*/
+			colorImages[4].addEventListener('mouseover', function() {
+				console.log('over');
+    			console.log(colorImages[4]);
+    			colorImages[4].classList.add('on'); 
+			});
+			colorImages[4].addEventListener('mouseout', function() {
+				console.log('out');
+    			console.log(colorImages[4]);
+    			colorImages[4].classList.remove('on');
+			});
+
+
+			/*-------------------------------------
+			| Image 6
+			-------------------------------------*/
+			colorImages[5].addEventListener('mouseover', function() {
+				console.log('over');
+    			console.log(colorImages[5]);
+    			colorImages[5].classList.add('on'); 
+			});
+			colorImages[5].addEventListener('mouseout', function() {
+				console.log('out');
+    			console.log(colorImages[5]);
+    			colorImages[5].classList.remove('on');
+			});
+
+
+		</script>
+
+	</body>
+</html>

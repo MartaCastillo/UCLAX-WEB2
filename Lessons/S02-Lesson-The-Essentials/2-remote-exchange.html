@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Exchange</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			body { background-color: #a13636; }
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Remote Exchange</h1>
+
+			<div class="swap">
+				<img src="./img/large/1_600x250.jpg" class="large" width="" height="">
+
+				<div class="gallery">
+					<img src="./img/small/1_200x83.jpg">
+					<img src="./img/small/2_200x83.jpg">
+					<img src="./img/small/3_200x83.jpg">
+					<img src="./img/small/4_200x83.jpg">
+					<img src="./img/small/5_200x83.jpg">
+					<img src="./img/small/6_200x83.jpg">
+				</div>
+			</div>
+		</div>
+
+		<script>
+
+			var large = document.querySelectorAll('img.large');
+			var thumbs = document.querySelectorAll('.gallery img');
+
+			console.log('Large Array', large);
+			console.log('Large', large[0]);
+			console.log('Thumbnails', thumbs);
+			console.log('Thumb 1', thumbs[0]);
+
+			thumbs[1].addEventListener('mouseover', function() {
+				console.log('you got me! Partner!!');
+				large[0].src = './img/large/2_600x250.jpg';
+			});
+
+			thumbs[2].addEventListener('mouseover', function() {
+				large[0].src = './img/large/3_600x250.jpg';
+			});
+
+			thumbs[3].addEventListener('mouseover', function() {
+				large[0].src = './img/large/4_600x250.jpg';
+			});
+
+			thumbs[4].addEventListener('mouseover', function() {
+				large[0].src = './img/large/5_600x250.jpg';
+			});
+
+			thumbs[5].addEventListener('mouseover', function() {
+				large[0].src = './img/large/6_600x250.jpg';
+			});
+
+			thumbs[0].addEventListener('mouseover', function() {
+				large[0].src = './img/large/1_600x250.jpg';
+			});
+
+
+
+
+		</script>
+	</body>
+</html>

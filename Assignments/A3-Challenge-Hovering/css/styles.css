@@ -1,0 +1,57 @@
+body { background-color: #333; color: #eee; font-family: helvetica, arial, sans-serif; }
+#container {
+	width: 854px;
+	margin: auto;
+}
+section {
+	background-color: #fff;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+
+/*-------------------------------------
+| Swap
+-------------------------------------*/
+.swap {
+	height: 450px;
+	position: relative;
+}
+.swap img { position: absolute; }
+.swap .color {
+	left: 50%; 	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+}
+
+.swap .star 	{	left: 10px; 	top: 10px; 		}
+.swap .blob 	{	right: 10px; top: 10px; 		}
+.swap .leaf 	{	left: 10px; 	bottom: 10px; 	}
+.swap .heart 	{	right: 10px; bottom: 10px; 	}
+
+
+/*-------------------------------------
+| Faded
+-------------------------------------*/
+.faded { text-align: center; }
+
+.faded .set {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+.faded .set img { transition: all 1s;}
+
+.faded .set img.color {
+	position: absolute; left: 0px; top: 0px;
+	opacity: 0.00;
+}
+
+.faded .set img.color.on { 
+	position: absolute; left: 0px; top: 0px;
+	opacity: 1.00; }
+
+
+

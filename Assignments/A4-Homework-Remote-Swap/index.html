@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Swap</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.remote {
+				border: solid teal 10px;
+				width: 960px;
+				height: 320px;
+				margin: 25px auto;
+				background-color: white;
+				position: relative;
+			}
+			/*Thumbnails on the right or left*/
+			.remote .thumbs {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				width: 320px;
+				height: 320px;
+			}
+
+			/*Large opposite of the thumbnails (e.g. right or left)*/
+			.remote .large {
+				position: absolute; right: 0px; top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Remote Swap</h1>
+
+		<div class="remote">
+			<div class="thumbs">
+				<img src="./img/small/batman-1_80x80.jpg">
+				<img src="./img/small/batman-2_80x80.jpg">
+				<img src="./img/small/batman-3_80x80.jpg">
+				<img src="./img/small/batman-4_80x80.jpg">
+				<img src="./img/small/batman-5_80x80.jpg">
+				<img src="./img/small/batman-6_80x80.jpg">
+				<img src="./img/small/batman-7_80x80.jpg">
+				<img src="./img/small/batman-8_80x80.jpg">
+				<img src="./img/small/batman-9_80x80.jpg">
+				<img src="./img/small/batman-10_80x80.jpg">
+				<img src="./img/small/batman-11_80x80.jpg">
+				<img src="./img/small/batman-12_80x80.jpg">
+				<img src="./img/small/batman-13_80x80.jpg">
+				<img src="./img/small/batman-14_80x80.jpg">
+				<img src="./img/small/batman-15_80x80.jpg">
+				<img src="./img/small/batman-16_80x80.jpg">
+			</div>
+			<div class="large">
+				<img class="largei" src="./img/large/batman-1_640x320.jpg">
+			</div>
+		</div>
+
+		<script>
+
+		var large = document.querySelectorAll('img.largei');
+		var thumbs = document.querySelectorAll('.thumbs img');
+
+		console.log('Large Array', large);
+		console.log('Large', large[0]);
+		console.log('Thumbnails', thumbs);
+		console.log('Thumb 1', thumbs[0]);
+
+		thumbs[0].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-1_640x320.jpg';
+		});
+
+		thumbs[1].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-2_640x320.jpg';
+		});
+
+		thumbs[2].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-3_640x320.jpg';
+		});
+
+		thumbs[3].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-4_640x320.jpg';
+		});
+
+		thumbs[4].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-5_640x320.jpg';
+		});
+
+		thumbs[5].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-6_640x320.jpg';
+		});
+
+		thumbs[6].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-7_640x320.jpg';
+		});
+
+		thumbs[7].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-8_640x320.jpg';
+		});
+
+		thumbs[8].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-9_640x320.jpg';
+		});
+
+		thumbs[9].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-10_640x320.jpg';
+		});
+
+		thumbs[10].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-11_640x320.jpg';
+		});
+
+		thumbs[11].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-12_640x320.jpg';
+		});
+
+		thumbs[12].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-13_640x320.jpg';
+		});
+
+		thumbs[13].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-14_640x320.jpg';
+		});
+
+		thumbs[14].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-15_640x320.jpg';
+		});
+
+		thumbs[15].addEventListener('mouseover', function() {
+			large[0].src = './img/large/batman-16_640x320.jpg';
+		});
+		
+		</script>
+	</body>
+</html>

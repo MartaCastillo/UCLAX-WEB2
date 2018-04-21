@@ -1,0 +1,29 @@
+body {
+	background-color: #eee;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+
+.wrapper {
+	background-color: rgba(255,255,255,.3);
+	width: 800px;
+	margin: 0px auto;
+	padding: 25px;
+}
+
+.mainmenu {}
+.mainmenu a {
+	display: inline-block;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.5);
+	color: black;
+	transition: .5s all;
+
+	text-decoration: none;
+	text-align: center;
+	width: 100px;
+	line-height: 50px;
+
+}
+.mainmenu a:hover { background-color: rgba(255,255,255,1); }
