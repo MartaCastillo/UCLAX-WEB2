@@ -15,6 +15,24 @@
 		</style>
 		<script>
 
+			window.onload = function() {
+				//function declaration :: it named function
+				function clickMe() {
+					console.log(this);
+				}
+				//function you can call it right away
+				clickMe();
+
+				var images = document.querySelectorAll('.dials img');
+
+				console.log(images);
+
+				images[0].addEventListener('click', clickMe);
+				images[1].addEventListener('click', clickMe);
+				images[2].addEventListener('click', clickMe);
+
+			}
+
 		</script>
 	</head>
 	<body>

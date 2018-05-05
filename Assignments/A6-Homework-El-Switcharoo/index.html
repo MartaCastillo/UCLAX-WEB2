@@ -2,26 +2,62 @@
 <html>
 	<head>
 		<title>El Switcharoo</title>
-		<style>
-
-		</style>
-		<script>
-			// your script goes here
-		</script>
+		<link rel="stylesheet" href="./css/styles.css">
 	</head>
 	<body>
 		<h1>El Switcharoo</h1>
 
 		<div id="stage">
 			<div class="set set1">
-				<!-- Set 1 Object and Switch Images Go Here -->
+				<div class='switch'>
+					<img class="left" src="img/switch-red.png">
+					<img class="right" src="img/switch-green.png">
+				</div>
+				<div class="origami">
+					<img class="paper" src="img/paper-purple.png">
+					<img class="bird" src="img/bird-purple.png">
+				</div>
 			</div>
 			<div class="set set2">
-				<!-- Set 2 Object and Switch Images Go Here -->
+				<div class='switch'>
+					<img class="left" src="img/switch-red.png">
+					<img class="right" src="img/switch-green.png">
+				</div>
+				<div class="origami">
+					<img class="paper" src="img/paper-aqua.png">
+					<img class="bird" src="img/bird-aqua.png">
+				</div>
 			</div>
-			<div class="set set2">
-				<!-- Set 3 Object and Switch Images Go Here -->
+			<div class="set set3">
+				<div class='switch'>
+					<img class="left" src="img/switch-red.png">
+					<img class="right" src="img/switch-green.png">
+				</div>
+				<div class="origami">
+					<img class="paper" src="img/paper-blue.png">
+					<img class="bird" src="img/bird-blue.png">
+				</div>
 			</div>
 		</div>
+		<script>
+
+		var theSets = document.querySelectorAll('.set');
+		var theSwitches = document.querySelectorAll('.set .switch');
+
+			console.log('switch:', theSwitches);
+
+			theSwitches[0].addEventListener('click', function(){
+				theSets[0].classList.toggle('on')
+			});
+
+			theSwitches[1].addEventListener('click', function(){
+				theSets[1].classList.toggle('on')
+			});
+
+			theSwitches[2].addEventListener('click', function(){
+				theSets[2].classList.toggle('on')
+			});
+			
+		</script>
 	</body>
 </html>

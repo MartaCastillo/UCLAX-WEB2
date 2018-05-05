@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Arrays and Loops</title>
+		<style>
+			body {
+			    background-color: #365634;
+			    color: #eee;
+			}
+			h1 {
+			    margin: 50px 20px 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Arrays and Loops</h1>
+
+		<h2>Ice Creams</h2>
+		<ul>
+			<li>Vanilla</li>
+			<li>Chocolate</li>
+			<li>Raspberry</li>
+			<li>Cookies &amp; Cream</li>
+			<li>Mint Chocolate Chip</li>
+		</ul>
+
+		<script>
+			/*-------------------------------------
+			| Review
+			-------------------------------------*/
+
+			// function declaration
+			function doThisandThat(anything, again) { //you have to declare it in order to use this function. whatever is inside the () are call arguments that can be separate by ,
+				console.log(25 + 10); //here is a declaration
+			}
+
+			//function call
+			doThisandThat('say what', 235); //with the use of the function declaration () you can now use this and put whatever () the function call literaly calls out the declartion
+
+			/*-------------------------------------
+			| Arrays FRUITY
+			-------------------------------------*/
+			// upon declaration/initializing
+
+			var fruity = ['apples', 'oranges', 'bananas', 12];
+			console.log(fruity);
+			console.log(fruity[0]);
+
+			// add after declaration/initializing
+			fruity.push('grapes');
+			console.log(fruity);
+
+			// removing array elements
+			fruity.slice(3, 1, 'durian');
+			console.log(fruity);
+
+			// deleting array elements
+			delete fruity[1];
+			console.log(fruity);
+
+			// array length
+
+			fruity.push('rasberries');
+			fruity.push('kiwi');
+			console.log(fruity);
+			var howMany = fruity.length;
+			console.log(howMany);
+
+			fruity[2] = 'new';
+			//fruit.slice(1, 1, 'something else');
+			console.log(fruity);
+
+
+			/*-------------------------------------
+			| for Loops VEGGIES
+			-------------------------------------*/
+			// standard for loop
+			for(var i = 0; i <= 5; i++) { //i increments
+				console.log(i);
+			}
+
+			// standard for loop against an array
+			var veggies = ['carrots', 'kale', 'spinach'];
+
+			veggies.push('green beens');
+			veggies.unshift('broccoli');
+			veggies.unshift('tomato');
+
+			for(var i = 0; i < veggies.lenght; i++) { //lenght is county doesn't matter how many there are in the array
+				console.log(veggies[i]);
+			}
+
+			/*-------------------------------------
+			| forEach
+			-------------------------------------*/
+			var cars = ['honda', 'hyundai', 'toyota', 'ford']
+
+			cars.push('dodge');
+			cars.unshift('tesla');
+
+
+			// used on arrays
+
+			cars.forEach(function(car) {
+				console.log('I drove a' + car + 'yesterday');
+			});
+
+
+			// Used on Collections (Not really an array, rather a NodeList or group of live DOM elements)
+			var listItems = document.querySelectorAll('li');
+				console.log(listItems);
+
+			listItems.forEach(function(theItem) {
+				console.log('I am going to eat' + theItem.innerHTML + 'ice cream tonight');
+			});
+
+
+		</script>
+
+
+	</body>
+</html>

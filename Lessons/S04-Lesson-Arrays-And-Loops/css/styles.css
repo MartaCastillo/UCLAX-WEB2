@@ -1,0 +1,30 @@
+body { background-color: #333; color: #eee; text-align: center; }
+
+#stage {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+
+	position: relative;
+
+	background-color: #eee;
+	background-image: url(../img/pixelgrid-800.gif);
+}
+#stage img {
+	box-shadow: inset 0px 0px 20px rgba(0,0,0,.8);
+	display: block;
+	position: absolute;
+	transition: all 1s;
+}
+
+#stage[data-currstate="one"] img#red 	{ top: 0px; 	left: 300px;  	}
+#stage[data-currstate="one"] img#green 	{ top: 400px; 	left: 600px;  	}
+#stage[data-currstate="one"] img#blue 	{ top: 400px; 	left: 0px;  	}
+
+#stage[data-currstate="two"] img#blue 	{ top: 0px; 	left: 300px;  	}
+#stage[data-currstate="two"] img#red 	{ top: 400px; 	left: 600px;  	}
+#stage[data-currstate="two"] img#green 	{ top: 400px; 	left: 0px;  	}
+
+#stage[data-currstate="three"] img#green 	{ top: 0px; 	left: 300px;  	}
+#stage[data-currstate="three"] img#blue 	{ top: 400px; 	left: 600px;  	}
+#stage[data-currstate="three"] img#red 		{ top: 400px; 	left: 0px;  	}

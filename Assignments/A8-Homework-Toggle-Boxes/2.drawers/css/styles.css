@@ -1,0 +1,39 @@
+body { background-color: #333; text-align: center; font-family: Helvetica, Arial, sans-serif; }
+#case {
+	width: 1000px;
+	border: solid 10px #BABBBA;
+	margin: auto;
+	background-color: #eee;
+	height: 400px;
+
+	overflow: hidden;
+
+	position: relative;
+}
+.drawer {
+	box-sizing: border-box;
+	width: 200px;
+	height: 300px;
+	border: solid 5px #328890;
+	border-bottom: none;
+
+	position: absolute;
+	bottom: -250px;
+
+	background-color: #fff;
+
+	text-align: center;
+	line-height: 50px;
+
+	transition: all 1s;
+}
+.drawer1 { left: 25px; }
+.drawer2 { left: 275px; }
+.drawer3 { left: 525px; }
+.drawer4 { left: 775px; }
+
+.drawer.on { bottom: 0px; }
+.drawer:hover { background-color: #328890; }
+
+
+

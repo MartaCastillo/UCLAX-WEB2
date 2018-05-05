@@ -17,16 +17,65 @@
 			/*-------------------------------------
 			| Review
 			-------------------------------------*/
+			var myVar = 'contains a reference to a value';
+			var myStr = 'Another String';
+			var myNum = 123;
+			var myNum2 = 200.12;
+
+			console.log(myVar + myStr);
+			console.log(myStr + myNum);
+			console.log(myNum2 + myNum);
+			console.log(myNum2 - myNum);
+			console.log(myNum2 * myNum);
+			console.log(myNum2 / myNum);
+
+
 
 
 			/*-------------------------------------
 			| Functions
 			-------------------------------------*/
+			//function declaration
+			function doSomething(myNum){
+				console.log(myNum + 20);
+				console.log(10 * myNum);
+			}
+
+			// function call (directly)
+			doSomething(10);
+			doSomething(20);
+			doSomething(100);
+
+
+
+			window.onload = function() {
+				var theH1 = document.querySelectorAll('h1');
+				console.log(theH1);
+				theH1[0].addEventListener('click', function (){
+					console.log('you hit me');
+
+
+				});
+			}
 
 
 			/*-------------------------------------
 			| Conditions
 			-------------------------------------*/
+			var weather = 'rain'
+
+			if (weather === 'rain')
+			{
+				console.log('Bring your Umbrella');
+			}
+			else if (weather === 'sunny')
+			{
+				console.log('above was not true');
+			}
+			else //this is a fallback if above is not true
+			{
+				console.log('above was not true');
+			}
 
 		</script>
 	</head>

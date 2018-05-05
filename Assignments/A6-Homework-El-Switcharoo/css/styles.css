@@ -1,0 +1,64 @@
+body {
+	background-color: #333;
+	color: #eee;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center; }
+
+#stage {
+	border: solid #fff 5px;
+	width: 960px;
+	height: 600px;
+	margin: 25px auto;
+	background-color: #444;
+	display: flex;
+}
+
+.set {
+	width: 320px;
+	position: relative;
+}
+
+.set img {
+	max-width: 100%;
+}
+
+.set .switch {
+	width: 108px;
+	height: 70px;
+	position: absolute;
+	bottom: 0px;	right: 100px;
+}
+
+.set .switch img {
+	width: 108px;
+	position: absolute;
+	left: 0px; top: 0px;
+}
+
+.origami {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 60px; top: 300px;
+}
+
+.origami img {
+	width: 200px;
+	position: absolute;
+	left: 0px; top: 0px;
+}
+
+div.set img.right {display: none;}
+div.set.on img.right {display: block;}
+
+div.set.on img.paper {display: block; opacity: 0}
+
+div.set img.bird {display: none;}
+div.set.on img.bird {display: block;}
+
+div.set div.origami {
+	transition: all 1s;
+	top: 300px;}
+div.set.on div.origami {
+	top: 0px;
+}

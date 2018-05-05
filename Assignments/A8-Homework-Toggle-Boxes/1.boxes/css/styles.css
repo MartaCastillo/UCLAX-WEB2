@@ -1,0 +1,43 @@
+/*Stage*/
+.solution {
+	width: 900px;
+	height: 600px;
+	background-image: url(../img/pixelgrid.png);
+	margin: auto;
+	padding: 0px;
+	position: relative;
+}
+
+/*boxes*/
+.box {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	left: 0px;
+
+	transition: 1s left;
+}
+/* Manage state through class switching. */
+.on { left: 800px; }
+
+.box:hover {
+   -moz-box-shadow:    		inset 0 0 20px rgba(0,0,0,.3);
+   -webkit-box-shadow: 		inset 0 0 20px rgba(0,0,0,.3);
+   box-shadow:         		inset 0 0 20px rgba(0,0,0,.3);
+}
+/*Colors of Light :: RGB*/
+.red { 		background-color: #c02622; }
+.green { 	background-color: #36b642; }
+.blue { 	background-color: #3e5fb6; }
+
+/*Colors of Reflection :: CMY*/
+.cyan { 	background-color: #38b9c0; }
+.magenta { 	background-color: #b62aac; }
+.yellow { 	background-color: #b6ae32; }
+
+

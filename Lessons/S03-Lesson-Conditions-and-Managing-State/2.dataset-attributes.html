@@ -17,14 +17,21 @@
 			/*-------------------------------------
 			| Dataset Attributes
 			-------------------------------------*/
+			window.onload = function() {
+
+				var yellow = document.querySelectorAll('img.yellow');
+
+				console.log(yellow[0].dataset.myname); //data-whateveryouwanttocallit...the data can be link in the javascript but it will be call dataset.whateveryouwanttocallit
+
+				}
 
 		</script>
 	</head>
 	<body>
 		<h1>Dataset Attributes</h1>
 
-		<img class="purple" 	src="./img/purple.png"	>
-		<img class="orange" 	src="./img/orange.png"	>
-		<img class="yellow" 	src="./img/yellow.png"	>
+		<img class="purple" 	src="./img/purple.png"	data-myname="one">
+		<img class="orange" 	src="./img/orange.png"	data-myname="two">
+		<img class="yellow" 	src="./img/yellow.png"	data-myname="three">
 	</body>
 </html>
