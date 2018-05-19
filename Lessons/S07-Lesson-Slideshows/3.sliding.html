@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Sliding :: Slideshows</title>
+
+		<link rel="stylesheet" href="css/styles.css">
+		<style>
+			.sliding {
+				width: 600px;
+				height: 300px;
+				position: relative;
+			}
+			.sliding .set  {
+				width: 600px;
+				height: 300px;
+				position: absolute;
+				left: 0px; top: 0px;
+			}
+			.sliding .set .text {
+				position: absolute;
+				left: 0px; right: 0px; bottom: 0px;
+				background-color: rgba(255,255,255,.5);
+				padding: 20px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>Sliding</header>
+			<main>
+				<div class="sliding">
+					<div class="set">
+						<img src="./img/image06.jpg">
+						<div class="text">Slide 1</div>
+					</div>
+					<div class="set">
+						<img src="./img/image07.jpg">
+						<div class="text">Slide 2</div>
+					</div>
+					<div class="set">
+						<img src="./img/image08.jpg">
+						<div class="text">Slide 3</div>
+					</div>
+					<div class="set">
+						<img src="./img/image09.jpg">
+						<div class="text">Slide 4</div>
+					</div>
+					<div class="set">
+						<img src="./img/image10.jpg">
+						<div class="text">Slide 5</div>
+					</div>
+				</div>
+			</main>
+			<footer>Slideshows &copy; 2017. All rights reserved.</footer>
+		</div>
+		<script src="./js/jquery.js"></script>
+		<script>
+
+		</script>
+	</body>
+</html>

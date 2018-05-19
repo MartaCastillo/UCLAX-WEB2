@@ -54,15 +54,66 @@
 			| Review
 			-------------------------------------*/
 
+			//single line comments
+			/*multiple
+			line comment*/
+
+			var container1 = 'I went to the park'; // this is a string
+
+			console.log(200 + 300);//you dont need var to do maths
+
 
 			/*-------------------------------------
 			| Conditions
 			-------------------------------------*/
+			var weather = 'rainy';
 
+			if (weather == 'sunny')
+			{
+				console.log('bring your umbrella');
+			}
+			else //if the above prove false, do this instead
+			{
+				console.log('bring your sunscreen');
+			}
 
 			/*-------------------------------------
 			| Toggle Element Examples
 			-------------------------------------*/
+			// 0. Grabs some toys
+			var button = document.querySelector('button.product');
+			var showHideText = document.querySelector('button.product span');
+			var departureDetails = document.querySelector('div.departure-details');
+
+			console.log('Button', button);
+			console.log('Show Hide Text', showHideText);
+			console.log('Depart Details', departureDetails);
+
+			// 1. hide the departure-details
+			departureDetails.style.display = 'none';
+
+			// 2. when user clicks on button (toggle)
+			button.addEventListener('click', function(){
+				if (departureDetails.style.display == 'none')
+				{
+					console.log('Do A');
+				// a. shows departure Details
+						departureDetails.style.display = 'block';
+						// change name to 'hide'
+						showHideText.innerHTML = 'Hide';
+
+				}
+				else
+				{
+					console.log('Do B');
+				// b. hide departure-details
+						departureDetails.style.display = 'none';
+						// change name to 'show'
+						showHideText.innerHTML = 'Show';
+
+				}
+
+			});
 
 
 		</script>

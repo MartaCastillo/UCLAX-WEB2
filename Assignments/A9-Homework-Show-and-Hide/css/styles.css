@@ -1,0 +1,23 @@
+body {
+		background-color: #006690;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+}
+h1 {
+		margin: 50px 20px 100px;
+		color: white;
+}
+.container {
+	background-color: #ddd;
+	padding: 20px;
+	width: 500px;
+	margin: auto;
+}
+header {
+	background-color: #eee;
+	padding: 20px;
+}
+.order-details {
+	background-color: #D3F4BD;
+	padding: 20px;
+}
