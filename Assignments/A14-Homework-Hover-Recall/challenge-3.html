@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kaleidoscope Rollover</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body class="kaleidoscope">
+
+		<h1>Kaleidoscope Rollover</h1>
+
+		<div id="kaleidoscope">
+			<img data-og="img/image01.jpg"	src="img/image01.jpg">
+			<img data-og="img/image02.jpg"	src="img/image02.jpg">
+			<img data-og="img/image03.jpg"	src="img/image03.jpg">
+			<img data-og="img/image04.jpg"	src="img/image04.jpg">
+			<img data-og="img/image05.jpg"	src="img/image05.jpg">
+			<img data-og="img/image06.jpg"	src="img/image06.jpg">
+			<img data-og="img/image07.jpg"	src="img/image07.jpg">
+			<img data-og="img/image08.jpg"	src="img/image08.jpg">
+		</div>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+
+		$('#kaleidoscope img').each(function(){
+			console.log($(this).data('og'));
+		});
+
+		$('#kaleidoscope img').mouseover(function(){
+			$('#kaleidoscope img').attr('src',this.src);
+		});
+
+		$('#kaleidoscope img').mouseout(function(){
+			$('#kaleidoscope img').each(function(){
+				var newSrc = $(this).data('og');
+				$(this).attr('src',newSrc);
+			});
+		});
+
+
+
+
+		</script>
+	</body>
+</html>

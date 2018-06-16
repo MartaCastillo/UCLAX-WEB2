@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Slideshows</title>
+
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>The Electric Slide</header>
+			<main>
+				<div class="faded">
+					<div class="set">
+						<img src="./img/image01.jpg">
+						<div class="text">TITLE1: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image02.jpg">
+						<div class="text">TITLE2: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image03.jpg">
+						<div class="text">TITLE3: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image04.jpg">
+						<div class="text">TITLE4: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image05.jpg">
+						<div class="text">TITLE5: Description</div>
+					</div>
+				</div>
+				<div class="slidingh">
+					<div class="set">
+						<img src="./img/image06.jpg">
+						<div class="text">TITLE6: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image07.jpg">
+						<div class="text">TITLE7: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image08.jpg">
+						<div class="text">TITLE8: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image09.jpg">
+						<div class="text">TITLE9: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image10.jpg">
+						<div class="text">TITLE10: Description</div>
+					</div>
+				</div>
+				<div class="slidingv">
+					<div class="set">
+						<img src="./img/image11.jpg">
+						<div class="text">TITLE11: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image12.jpg">
+						<div class="text">TITLE12: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image13.jpg">
+						<div class="text">TITLE13: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image14.jpg">
+						<div class="text">TITLE14: Description</div>
+					</div>
+					<div class="set">
+						<img src="./img/image15.jpg">
+						<div class="text">TITLE15: Description</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="./js/jquery.js"></script>
+		<script>
+/*-------------------------------------
+| Faded
+-------------------------------------*/
+				$('.faded .set:gt(0)').css('opacity', 0.0); //gt is greater than lt is less than
+
+			function fade_second_image() {
+				$('.faded .set:eq(1)').delay(2000).animate({'opacity': 1.0}, 1000, shuffle_first_image); //1000 is 1 second
+			}
+
+			function shuffle_first_image() {
+				$('.faded .set:eq(0)').css('opacity', 0.0).appendTo('.faded');
+				fade_second_image();
+			}
+
+			//start the party
+			fade_second_image();
+
+/*-------------------------------------
+| Horizontal Slide
+-------------------------------------*/
+
+				$('.slidingh .set:gt(0)').css({'left':'320px'});
+
+				function slide_seventh_image(){
+					$('.slidingh .set:eq(1)').delay(2000).animate({'left':'0px'}, 1000);
+					$('.slidingh .set:eq(0)').delay(2000).animate({'left':'-320px'}, 1000, shuffle_sixth_image);
+				}
+
+				function shuffle_sixth_image() {
+					$('.slidingh .set:eq(0)').css({'left':'320px'}).appendTo('.slidingh');
+					slide_seventh_image();
+				}
+
+
+				//start the party
+				slide_seventh_image();
+
+/*-------------------------------------
+| Vertical Slide
+-------------------------------------*/
+
+
+				$('.slidingv .set:gt(0)').css({'top':'320px'});
+
+				function slide_twelfth_image(){
+					$('.slidingv .set:eq(1)').delay(2000).animate({'top':'0px'}, 1000);
+					$('.slidingv .set:eq(0)').delay(2000).animate({'top':'-320px'}, 1000, shuffle_eleventh_image);
+				}
+
+				function shuffle_eleventh_image() {
+					$('.slidingv .set:eq(0)').css({'top':'320px'}).appendTo('.slidingv');
+					slide_twelfth_image();
+				}
+
+
+				//start the party
+				slide_twelfth_image();
+
+		</script>
+
+	</body>
+</html>

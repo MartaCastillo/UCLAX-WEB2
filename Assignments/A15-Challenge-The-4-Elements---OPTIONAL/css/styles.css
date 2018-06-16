@@ -1,0 +1,41 @@
+/*-------------------------------------
+| Bangers Font
+-------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+/*-------------------------------------
+| Core
+-------------------------------------*/
+body {
+	font-family: 'Bangers', cursive;
+	background-color: #000;
+	text-align: center;
+	color: #fff;
+}
+
+/*-------------------------------------
+| Elements
+-------------------------------------*/
+#elements {
+	border: solid 10px #7e7e7e;
+	width: 800px;
+	height: 500px;
+	margin: 25px auto;
+	display: flex;
+}
+.element {
+	width: 200px;
+	position: relative;
+}
+
+.element h1 {
+	/*background-color: orange;*/
+	margin: 0px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	padding: 15px;
+
+	opacity: 0;
+}

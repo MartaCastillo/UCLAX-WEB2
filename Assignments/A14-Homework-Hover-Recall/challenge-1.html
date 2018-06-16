@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Remote Rollover</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body class="remote">
+
+		<h1>Remote Rollover</h1>
+		<div id="enlarged">
+			<img src="img/image01.jpg" />
+		</div>
+		<div id="gallery">
+			<img class="galeria" data-large="img/image01.jpg" src="img/image01.jpg" />
+			<img class="galeria" data-large="img/image02.jpg" src="img/image02.jpg" />
+			<img class="galeria" data-large="img/image03.jpg" src="img/image03.jpg" />
+			<img class="galeria" data-large="img/image04.jpg" src="img/image04.jpg" />
+			<img class="galeria" data-large="img/image05.jpg" src="img/image05.jpg" />
+			<img class="galeria" data-large="img/image06.jpg" src="img/image06.jpg" />
+			<img class="galeria" data-large="img/image07.jpg" src="img/image07.jpg" />
+			<img class="galeria" data-large="img/image08.jpg" src="img/image08.jpg" />
+		</div>
+
+		<!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+		<script>
+
+		var large = document.querySelector('#enlarged img');
+		var thumbnails = document.querySelectorAll('#gallery img');
+
+		thumbnails.forEach(function(thumb){
+			thumb.addEventListener('mouseover', function(){
+				large.src= this.src;
+			});
+
+		});
+
+
+//THIS IS HOW IT IS DONE IN JQUERY
+		//var large = $('#enlarged img');
+		//var thumbnails = $('#gallery img');
+
+		//thumbnails.each(function(){
+			//console.log(this);
+
+			//$(this).mouseover(function(){
+				//large.attr('src', this.src);
+			//});
+
+		//});
+
+
+
+		</script>
+	</body>
+</html>

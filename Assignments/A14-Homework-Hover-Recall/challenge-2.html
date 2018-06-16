@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Neighbor Rollover</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body class="neighbor">
+
+		<h1>Neighbor Rollover</h1>
+
+		<div id="neighbor">
+			<img data-over="img/image02.jpg"	data-out="img/image01.jpg"		src="img/image01.jpg">
+			<img data-over="img/image03.jpg"	data-out="img/image02.jpg"		src="img/image02.jpg">
+			<img data-over="img/image04.jpg"	data-out="img/image03.jpg"		src="img/image03.jpg">
+			<img data-over="img/image05.jpg"	data-out="img/image04.jpg"		src="img/image04.jpg">
+			<img data-over="img/image06.jpg"	data-out="img/image05.jpg"		src="img/image05.jpg">
+			<img data-over="img/image07.jpg"	data-out="img/image06.jpg"		src="img/image06.jpg">
+			<img data-over="img/image08.jpg"	data-out="img/image07.jpg"		src="img/image07.jpg">
+			<img data-over="img/image01.jpg"	data-out="img/image08.jpg"		src="img/image08.jpg">
+		</div>
+
+		<!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+		<script>
+
+		var theImages = document.querySelectorAll('#neighbor img');
+
+		console.log(theImages);
+
+		theImages.forEach(function(imagen){
+			imagen.addEventListener('mouseover', function() {
+				this.src = this.dataset.over;
+			});
+
+			imagen.addEventListener('mouseout', function(){
+				this.src = this.dataset.out;
+			});
+
+		});
+
+
+		</script>
+	</body>
+</html>

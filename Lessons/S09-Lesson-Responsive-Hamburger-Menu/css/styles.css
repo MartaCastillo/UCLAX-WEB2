@@ -1,0 +1,167 @@
+
+/*-------------------------------------
+| Core /Root Elements
+-------------------------------------*/
+body {
+	background-color: #f4f4f4;
+	margin: 0px;
+	border-top: solid 8px #090909;
+	font-family: helvetica, sans-serif;
+}
+div.wrapper {
+	outline: solid 2px red;
+	/* Responsive Design */
+	max-width: 960px;
+	width: 90%;
+	min-width: 320px;
+
+	margin: auto;
+}
+
+/*-------------------------------------
+| Header and Footer
+-------------------------------------*/
+header.opening {
+	height: 130px;
+	position: relative;
+}
+
+header.opening h1.logo {
+	background-image: url(../img/cc-logo.png);
+	width: 183px;
+	height: 100px;
+	font-size: 0;
+
+	position: absolute;
+	left: 0px; top: 10px;
+}
+footer.closing {
+	background-color: #e2e2e2;
+	padding: 100px 0px;
+	font-size: 12px;
+	opacity: .7;
+	text-align: center;
+	margin-top: 100px;
+}
+
+/*-------------------------------------
+| Navigation
+-------------------------------------*/
+nav.mainmenu {
+	display: none;
+
+	position: absolute;
+	right: 10px; bottom: -20px;
+
+	background-color: black;
+	padding: 20px;
+}
+body.mainmenu-show nav.mainmenu {
+	display: block;
+}
+
+nav.mainmenu a {
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: none;
+
+	margin-left: 73px;
+	color: #f88b00;
+}
+nav.mainmenu a:hover {
+	color: #ffc070;
+}
+
+
+
+@media screen and (min-width:1045px) {
+
+	nav.mainmenu {
+		display: block;
+		right: 0px; bottom: 30px;
+	}
+	nav.mainmenu a {
+		display: inline-block;
+	}
+}
+
+/*-------------------------------------
+| Hamburger
+-------------------------------------*/
+.hamburger {
+	position: absolute;
+	right: 10px; top: 10px;
+	font-size: 30px;
+}
+
+@media screen and (min-width:1045px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+
+
+/*-------------------------------------
+| Horizontal Rule
+-------------------------------------*/
+.horizontal-rule {
+	margin-bottom: 20px;
+	border-top: 1px solid #c0c0c0;
+	padding-bottom: 20px;
+}
+
+/*-------------------------------------
+| Slideshow
+-------------------------------------*/
+.slideshow {
+	overflow: hidden;
+	position: relative;
+}
+.slideshow img {
+	/* ALL IMAGES RESPOND */
+	max-width: 100%;
+	/* LET NATURAL HEIGHT OF IMAGE HOLD THE SPACE */
+	height: auto;
+}
+.slideshow-container {
+	position: absolute;
+	left: 0px; top: 0px; right: 0px; bottom: 0px;
+
+}
+.slideshow-container img {
+	position: absolute;
+	left: 0px; top: 0px;
+}
+
+/*-------------------------------------
+| Columns
+-------------------------------------*/
+.columns {
+	border: solid 3px purple;
+	padding: 10px;
+}
+.columns .col {
+	border: solid 3px green;
+	background-color: orange;
+}
+@media screen and (min-width:800px) {
+	.columns {
+		display: flex;
+		justify-content: space-between;
+	}
+	.columns .col {
+		background-color: pink;
+	}
+	.columns-2 .col { width: 47%; }
+	.columns-3 .col { width: 30%; }
+}
+
+/*-------------------------------------
+| Portfolio
+-------------------------------------*/
+
+
+

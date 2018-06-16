@@ -3,9 +3,23 @@
 	<head>
 		<title>Hot Air Balloons</title>
 		<style>
-			body { background-color: #333; color: #eee; text-align: center; font-family: helvetica, sans-serif; }
+			body { background-color: #333;
+				color: #eee;
+				text-align: center;
+				font-family: helvetica, sans-serif; }
 
 			/*your styles go here.*/
+			.gallery {
+				width: 400px;
+				height: 400px;
+				position: relative;
+				margin: auto;
+				border: 10px solid teal;
+			}
+			.gallery img {
+				position: absolute;
+				left: 0px; top: 0px;
+			}
 		</style>
 	</head>
 	<body>
@@ -13,10 +27,32 @@
 		<h1>Hot Air Balloons</h1>
 
 		<!-- html goes here -->
+		<div class="gallery">
+			<img src="./img/image1.jpg">
+			<img src="./img/image2.jpg">
+			<img src="./img/image3.jpg">
+			<img src="./img/image4.jpg">
+			<img src="./img/image5.jpg">
+			<img src="./img/image6.jpg">
+			<img src="./img/image7.jpg">
+		</div>
 
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script>
 			// your script goes here.
+			$('img:gt(0)').css('opacity', 0.0); //gt is greater than lt is less than
+
+			function gal_second_image() {
+				$('img:eq(1)').delay(2000).animate({'opacity': 1.0}, 2000, shuffle_first_image); //1000 is 1 second
+			}
+
+			function shuffle_first_image() {
+				$('img:eq(0)').css('opacity', 0.0).appendTo('.gallery');
+				gal_second_image();
+			}
+
+			//start the party
+			gal_second_image();
 		</script>
 	</body>
 </html>

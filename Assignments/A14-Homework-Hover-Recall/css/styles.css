@@ -1,0 +1,42 @@
+/*all*/
+#stage { padding: 25px; }
+#enlarged, #gallery { 
+	margin:25px 0px; 
+	font-size: 0px; 
+	width: 500px;
+	margin: auto;
+}
+#gallery img {
+	width:125px;
+}
+body {
+	text-align: center;
+	font-family: helvetica, sans-serif;
+}
+/*unique colors*/
+.remote { background-color:#d4c67c; }
+.neighbor { background-color:#70bfd4; }
+.kaleidoscope { background-color:#a971d4; }
+
+/*neighbor*/
+#neighbor {
+	width: 800px;
+	font-size: 0px;
+	margin: auto;
+}
+#neighbor img {
+	width: 160px;
+	margin: 20px;
+}
+
+/*kaleidoscope*/
+#kaleidoscope {
+	width: 800px;
+	font-size: 0px;
+	margin: auto;
+}
+#kaleidoscope img {
+	width: 160px;
+	margin: 20px;
+}
+

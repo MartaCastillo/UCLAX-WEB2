@@ -12,6 +12,8 @@
 				width: 600px;
 				height: 300px;
 				position: relative;
+
+				overflow: hidden;
 			}
 			.sliding .set  {
 				width: 600px;
@@ -59,6 +61,22 @@
 		</div>
 		<script src="./js/jquery.js"></script>
 		<script>
+
+				$('.set:gt(0)').css({'left':'600px'});
+
+				function slide_second_image(){
+					$('.set:eq(1)').delay(2000).animate({'left':'0px'}, 1000);
+					$('.set:eq(0)').delay(2000).animate({'left':'-600px'}, 1000, shuffle_first_image);
+				}
+
+				function shuffle_first_image() {
+					$('.set:eq(0)').css({'left':'600px'}).appendTo('.sliding');
+					slide_second_image();
+				}
+
+
+				//start the party
+				slide_second_image();
 
 		</script>
 	</body>

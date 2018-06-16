@@ -36,6 +36,20 @@
 		<script src="./js/jquery.js"></script>
 		<script>
 
+			$('img:gt(0)').css('opacity', 0.0); //gt is greater than lt is less than
+
+			function fade_second_image() {
+				$('img:eq(1)').delay(2000).animate({'opacity': 1.0}, 2000, shuffle_first_image); //1000 is 1 second
+			}
+
+			function shuffle_first_image() {
+				$('img:eq(0)').css('opacity', 0.0).appendTo('.faded');
+				fade_second_image();
+			}
+
+			//start the party
+			fade_second_image();
+
 		</script>
 	</body>
 </html>

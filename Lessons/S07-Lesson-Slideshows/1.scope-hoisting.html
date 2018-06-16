@@ -22,17 +22,55 @@
             <img src="./img/image14.jpg">
             <img src="./img/image15.jpg">
         </div>
-
+        <script src="./js/jquery.js"></script>
         <script>
+        // console.log($);
+
+        //function $('css selector'){
+        //
+        // }
+
+        // console.log($('.gallery img'));
+
+        $('.gallery img').click(function(){
+            console.log(this);
+        });
+        $('h1').click(function(){
+            console.log('I can select anything');
+        });
+
+
+
             /*-------------------------------------
             | Global Scope :: Window is the Global Scope
             | Global Scope isn't bad, we just tend to avoid it to keep code from clashing.
             -------------------------------------*/
+            // console.log(window);
+            // console.log(document);
+
+            var myVar = 'Hello';
+            // console.log(myVar);
 
 
             /*-------------------------------------
             | Local Scope :: Scope is relative to that block
             -------------------------------------*/
+            var outside = 'I am Outside';
+
+            function doSomething() {
+                var inside =  'I am Inside';
+
+                console.log('in func', outside);
+                console.log('in func', inside);
+            }
+            // doSomething();
+
+            // console.log('out func', outside);
+            // console.log('out func', inside);
+
+
+
+
 
 
             /*-------------------------------------
@@ -45,11 +83,38 @@
             /*-------------------------------------
             | the THIS keyword and Scope
             -------------------------------------*/
+            console.log(this);
+
+            $('img').click(function(){
+                console.log(this);
+            });
 
 
             /*-------------------------------------
             | var, const and let
             -------------------------------------*/
+
+            var item1 = 'Apple'; // var is changing to const or let
+            const item2 = 'Orange';
+            let item3 = 'Banana';
+
+            // cannot change const value
+            // item2 = 'something else';
+
+            console.log(item1);
+            console.log(item2);
+            console.log(item3);
+
+            if (true) // if is a condition and var can work outside
+            {
+                var greeting1 = 'Hello Var';
+                let greeting2 = 'Hello Let'; // Let do not work the same way as var if is not in Function
+                console.log(greeting1);
+                console.log(greeting2);
+            }
+
+            console.log(greeting1);
+            console.log(greeting2);
 
 
             /*-------------------------------------
