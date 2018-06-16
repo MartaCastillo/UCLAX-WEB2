@@ -55,7 +55,7 @@ nav.mainmenu {
 
 	position: absolute;
 	right: 10px; bottom: -20px;
-	padding: 35px;
+	padding: 20px;
 }
 body.mainmenu-show nav.mainmenu {
 	display: block;
